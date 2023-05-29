@@ -1,13 +1,6 @@
 const arr = JSON.parse(localStorage.getItem('formData')) || [];
 
-const form = document.querySelector('#form');
 const add = document.getElementById('addBtn');
-// const title = document.getElementById('title');
-// const author = document.getElementById('author');
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-});
 
 add.addEventListener('click', () => {
   const formData = {
@@ -49,5 +42,3 @@ function display() {
 add.addEventListener('click', display);
 
 display();
-
-// Remove //
