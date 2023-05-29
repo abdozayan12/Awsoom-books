@@ -1,6 +1,7 @@
 <a name="readme-top"></a>
 <div>
-  <h3><b>Hello Microverse</b></h3>
+  <h3><b>Awesome books
+</b></h3>
 </div>
 
 # 📗 Table of Contents
@@ -25,9 +26,9 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-# 📖 Microver 1st capstone project <a name="about-project"></a>
+# 📖 Awesome books <a name="about-project"></a>
 
-**The Microverse 1st Capstone Project aims to showcase the skills and knowledge acquired during the Microverse program. The project involves building a web application using the technologies and concepts learned throughout the curriculum.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -40,13 +41,13 @@
 - package.json
 ### Key Features <a name="key-features"></a>
 
-Microver 1st capstone project
+Awesome books
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://abdozayan12.github.io/capstone-project---Conference-page/)
+- [Live Demo Link](https://abdozayan12.github.io/Awsoom-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,8 +65,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-https://github.com/abdozayan12/capstone-project---Conference-page
-
+https://github.com/abdozayan12/Awsoom-books
  ````
  cd Portfolio-setup-and-mobile-first
  ````
@@ -77,6 +77,13 @@ https://github.com/abdozayan12/capstone-project---Conference-page
 - GitHub: [@GitHub](https://github.com/abdozayan12)
 - Twitter: [@Twitter](https://twitter.com/zayan_abdo)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdo-zayan-39b073128/)
+
+👤 Vikas Chib
+
+- GitHub: [@vikas924](https://github.com/vikas924)
+- Twitter: [@vikas410190](https://twitter.com/vikas410190)
+- LinkedIn: [Vikas Singh](https://www.linkedin.com/in/vikas-singh-586a07132/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,7 +98,7 @@ https://github.com/abdozayan12/capstone-project---Conference-page
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abdozayan12/capstone-project---Conference-page/issues).
+Feel free to check the [issues page](https://github.com/abdozayan12/Awsoom-books/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,7 +110,7 @@ If you like this project give a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Cindy Shin the owner of the design I used.
+
 I would like to thank Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
