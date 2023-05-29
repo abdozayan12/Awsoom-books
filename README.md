@@ -110,7 +110,7 @@ If you like this project give a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Cindy Shin the owner of the design I used.
+
 I would like to thank Microverse
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
