@@ -80,6 +80,10 @@ https://github.com/abdozayan12/Awsoom-books
 
 👤 Vikas Chib
 
+- GitHub: [@GitHub](https://github.com/abdozayan12)
+- Twitter: [@Twitter](https://twitter.com/zayan_abdo)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/abdo-zayan-39b073128/)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
