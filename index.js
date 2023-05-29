@@ -20,11 +20,10 @@ function display() {
     const { title, author } = Json.parse(localStorage.getItem('formData'));
     const output = document.getElementById('output');
     output.innerHTML = `
-        <h2>${title}</h2><br>
-        <h2>${author}</h2>
+        <h2>${title}</h2> by <h2>${author}</h2>
+        
         <button id="removeBtn">remove</button>
         `;
   }
-
-  display();
+  form.addEventListener('click',  display());
 }
