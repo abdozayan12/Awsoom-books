@@ -11,10 +11,35 @@ body {
 
 .addBook {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input input {
+  border: solid 2px #000;
 }
 
 .addBook form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 75%;
+}
+
+.addBook .add {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add button {
+  width: 30%;
+  background-color: #fff;
+  border-radius: 8px;
 }
