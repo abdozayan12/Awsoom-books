@@ -1,47 +1,3 @@
-// const arr = JSON.parse(localStorage.getItem('formData')) || [];
-
-// const add = document.getElementById('addBtn');
-
-// add.addEventListener('click', () => {
-//   const formData = {
-//     title: document.getElementById('title').value,
-//     author: document.getElementById('author').value,
-//   };
-//   arr.push(formData);
-
-//   localStorage.setItem('formData', JSON.stringify(arr));
-// });
-
-// function remove() {
-//   const parent = document.querySelector('#output');
-//   const button = document.querySelectorAll('#removeBtn');
-//   const removeBTN = Array.from(button).indexOf(this);
-//   const RemoveDesire = this.parentNode;
-//   parent.removeChild(RemoveDesire);
-//   arr.splice(removeBTN, 1);
-//   localStorage.setItem('formData', JSON.stringify(arr));
-// }
-
-// function display() {
-//   const output = document.querySelector('#output');
-//   let data = '';
-//   for (let i = 0; i <= arr.length - 1; i += 1) {
-//     data += `<div>
-//         <h2>${arr[i].title}</h2> by <h2>${arr[i].author}</h2>
-
-//         <button id="removeBtn">remove</button></div>
-//         `;
-//   }
-//   output.innerHTML = data;
-//   for (let i = 0; i < arr.length; i += 1) {
-//     const button = document.querySelectorAll('#removeBtn');
-//     button[i].addEventListener('click', remove);
-//   }
-// }
-
-// add.addEventListener('click', display);
-
-// display();
 
 class BookList {
   constructor(title, author) {
@@ -64,62 +20,54 @@ class BookList {
     const booklist = JSON.parse(localStorage.getItem('array')) || [];
     const output = document.querySelector('#output');
     const div = document.createElement('div');
-    div.innerHTML = `
-           <h2>${this.title}</h2> by <h2>${this.author}</h2>
-
-          <button id="removeBtn">remove</button>
-             `;
+    div.classList.add('div');
+    div.innerHTML = `<div class="paradiv"><p>"${this.title}" by "${this.author}"</p></div><div class="buttondiv"><button id="button">Remove</button></div>`;
 
     output.appendChild(div);
 
     for (let i = 0; i < booklist.length; i += 1) {
-      const button = document.querySelectorAll('#removeBtn');
+      const button = document.querySelectorAll('#button');
       button[i].addEventListener('click', BookList.remove);
     }
+    const change = document.querySelectorAll('.div');
+    for (let i = 0; i < booklist.length; i += 1) {
+      if (i % 2 === 0) {
+        change[i].classList.add('background');
+      }
   }
+}
 
   static remove() {
-
+  const booklist = JSON.parse(localStorage.getItem('array')) || [];
+  const parent = document.querySelector('#output');
+  const button = document.querySelectorAll('#button');
+  const removeBTN = Array.from(button).indexOf(this);
+  const RemoveDesire = this.parentNode.parentNode;
+  parent.removeChild(RemoveDesire);
+  booklist.splice(removeBTN, 1);
+  localStorage.setItem('array', JSON.stringify(booklist));
   }
 
   static render() {
     const booklist = JSON.parse(localStorage.getItem('array')) || [];
     const output = document.querySelector('#output');
-    let data = '';
-    for (let i = 0; i <= booklist.length - 1; i += 1) {
-      data += `<div>
-           <h2>${booklist[i].title}</h2> by <h2>${booklist[i].author}</h2>
-  
-           <button id="removeBtn">remove</button></div>
-           `;
-    }
-    output.innerHTML = data;
 
     for (let i = 0; i < booklist.length; i += 1) {
-      const button = document.querySelectorAll('#removeBtn');
+      const div = document.createElement('div');
+      div.classList.add('div');
+      div.innerHTML = `<div class="paradiv"><p>"${booklist[i].title}" by "${booklist[i].author}"</p></div><div class="buttondiv"><button id="button">Remove</button></div>`;
+      output.appendChild(div);
+      const button = document.querySelectorAll('#button');
       button[i].addEventListener('click', BookList.remove);
     }
+    const change = document.querySelectorAll('.div');
+    for (let i = 0; i < booklist.length; i += 1) {
+      if (i % 2 === 0) {
+        change[i].classList.add('background');
+      }
+  }
   }
 }
-
-// function render() {
-//   const booklist = JSON.parse(localStorage.getItem('array')) || [];
-//   const output = document.querySelector('#output');
-//   let data = '';
-//   for (let i = 0; i <= booklist.length - 1; i += 1) {
-//     data += `<div>
-//          <h2>${booklist[i].title}</h2> by <h2>${booklist[i].author}</h2>
-
-//          <button id="removeBtn">remove</button></div>
-//          `;
-//   }
-//   output.innerHTML = data;
-
-//   for (let i = 0; i < booklist.length; i += 1) {
-//     const button = document.querySelectorAll('#removeBtn');
-//     button[i].addEventListener('click', BookList.remove);
-//   }
-// }
 
 const form = document.querySelector('#form');
 form.addEventListener('submit', (e) => {
