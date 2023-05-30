@@ -1,4 +1,3 @@
-
 class BookList {
   constructor(title, author) {
     this.title = title;
@@ -34,18 +33,18 @@ class BookList {
       if (i % 2 === 0) {
         change[i].classList.add('background');
       }
+    }
   }
-}
 
   static remove() {
-  const booklist = JSON.parse(localStorage.getItem('array')) || [];
-  const parent = document.querySelector('#output');
-  const button = document.querySelectorAll('#button');
-  const removeBTN = Array.from(button).indexOf(this);
-  const RemoveDesire = this.parentNode.parentNode;
-  parent.removeChild(RemoveDesire);
-  booklist.splice(removeBTN, 1);
-  localStorage.setItem('array', JSON.stringify(booklist));
+    const booklist = JSON.parse(localStorage.getItem('array')) || [];
+    const parent = document.querySelector('#output');
+    const button = document.querySelectorAll('#button');
+    const removeBTN = Array.from(button).indexOf(this);
+    const RemoveDesire = this.parentNode.parentNode;
+    parent.removeChild(RemoveDesire);
+    booklist.splice(removeBTN, 1);
+    localStorage.setItem('array', JSON.stringify(booklist));
   }
 
   static render() {
@@ -65,7 +64,7 @@ class BookList {
       if (i % 2 === 0) {
         change[i].classList.add('background');
       }
-  }
+    }
   }
 }
 
