@@ -1,44 +1,86 @@
-const arr = JSON.parse(localStorage.getItem('formData')) || [];
+class BookList {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
 
-const add = document.getElementById('addBtn');
+  add() {
+    const booklist = JSON.parse(localStorage.getItem('array')) || [];
+    const Title = this.title;
+    const Author = this.author;
+    if ((Title.length !== 0) && (Author.length !== 0)) {
+      booklist.push(this);
+      localStorage.setItem('array', JSON.stringify(booklist));
+      this.display();
+    }
+  }
 
-add.addEventListener('click', () => {
-  const formData = {
-    title: document.getElementById('title').value,
-    author: document.getElementById('author').value,
-  };
-  arr.push(formData);
+  display() {
+    const booklist = JSON.parse(localStorage.getItem('array')) || [];
+    const output = document.querySelector('#output');
+    const div = document.createElement('div');
+    div.classList.add('div');
+    div.innerHTML = `<div class="paradiv"><p>"${this.title}" by "${this.author}"</p></div><div class="buttondiv"><button id="button">Remove</button></div>`;
 
-  localStorage.setItem('formData', JSON.stringify(arr));
+    output.appendChild(div);
+
+    for (let i = 0; i < booklist.length; i += 1) {
+      const button = document.querySelectorAll('#button');
+      button[i].addEventListener('click', BookList.remove);
+    }
+    const change = document.querySelectorAll('.div');
+    for (let i = 0; i < booklist.length; i += 1) {
+      if (i % 2 === 0) {
+        change[i].classList.add('background');
+      }
+    }
+  }
+
+  static remove() {
+    const booklist = JSON.parse(localStorage.getItem('array')) || [];
+    const parent = document.querySelector('#output');
+    const button = document.querySelectorAll('#button');
+    const removeBTN = Array.from(button).indexOf(this);
+    const RemoveDesire = this.parentNode.parentNode;
+    parent.removeChild(RemoveDesire);
+    booklist.splice(removeBTN, 1);
+    localStorage.setItem('array', JSON.stringify(booklist));
+  }
+
+  static render() {
+    const booklist = JSON.parse(localStorage.getItem('array')) || [];
+    const output = document.querySelector('#output');
+
+    for (let i = 0; i < booklist.length; i += 1) {
+      const div = document.createElement('div');
+      div.classList.add('div');
+      div.innerHTML = `<div class="paradiv"><p>"${booklist[i].title}" by "${booklist[i].author}"</p></div><div class="buttondiv"><button id="button">Remove</button></div>`;
+      output.appendChild(div);
+      const button = document.querySelectorAll('#button');
+      button[i].addEventListener('click', BookList.remove);
+    }
+    const change = document.querySelectorAll('.div');
+    for (let i = 0; i < booklist.length; i += 1) {
+      if (i % 2 === 0) {
+        change[i].classList.add('background');
+      }
+    }
+  }
+}
+
+const form = document.querySelector('#form');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
 });
 
-function remove() {
-  const parent = document.querySelector('#output');
-  const button = document.querySelectorAll('#removeBtn');
-  const removeBTN = Array.from(button).indexOf(this);
-  const RemoveDesire = this.parentNode;
-  parent.removeChild(RemoveDesire);
-  arr.splice(removeBTN, 1);
-  localStorage.setItem('formData', JSON.stringify(arr));
+function newBook() {
+  const title = document.querySelector('#title');
+  const author = document.querySelector('#author');
+  const books = new BookList(title.value, author.value);
+  books.add();
+  title.value = '';
+  author.value = '';
 }
 
-function display() {
-  const output = document.querySelector('#output');
-  let data = '';
-  for (let i = 0; i <= arr.length - 1; i += 1) {
-    data += `<div>
-        <h2>${arr[i].title}</h2> by <h2>${arr[i].author}</h2>
-        
-        <button id="removeBtn">remove</button></div>
-        `;
-  }
-  output.innerHTML = data;
-  for (let i = 0; i < arr.length; i += 1) {
-    const button = document.querySelectorAll('#removeBtn');
-    button[i].addEventListener('click', remove);
-  }
-}
-
-add.addEventListener('click', display);
-
-display();
+BookList.render();
+document.querySelector('.add').addEventListener('click', newBook);
