@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,25 +8,58 @@
     <title>plain JavaScript with objects</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Awesome books</h1>
-        <div id="output">
 
+<body>
+    <header class="header">
+        <div class="wrap">
+        <a id="logo" href="#">Awesome Books</a>
+        <nav class="navbar">
+            <ul class="navul">
+                <li id="nav1" class="navli"><a class="navlink" href="#List">List</a></li>
+                <li id="nav2" class="navli"><a class="navlink" href="#Add-new">Add new</a></li>
+                <li id="nav3" class="navli"><a class="navlink" href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+       </div>
+       <div class="date"></div>
+    </header>
+    <section id="List" class="booklist">
+        <h1>Awesome books</h1>
+        <div id="output">
         </div>
-        <span class="liner"></span>
+    </section>
+    <section id="Add-new" class="addnew">
         <h2>Add new book</h2>
     <div class="addBook">
-        <form id="form" >
+        <form id="form">
             <div class="input">
                 <input type="text" placeholder="Title" maxlength="30" id="title" required>
-            <input type="text" placeholder="Author" maxlength="25" id="author" required>
+                <input type="text" placeholder="Author" maxlength="25" id="author" required>
             </div>
             <div class="add">
                 <button id="addBtn">add</button>
             </div>
-            
+
         </form>
     </div>
-    <script  src="index.js"></script>  
+    </section>
+    <section id="Contact" class="contact">
+        <h1 class="contacthead">Contact information</h1>
+        <div class="contactdiv">
+        <p class="contactpara">Do have any questions or you just want to say "Hello"?<br>You can reach out to us!</p>
+        <ul class="contactul">
+        <li class="contactli">Our e-mail: mail@mail.com</li>
+        <li class="contactli">Our phone number: 0043586534422</li>
+        <li class="contactli">Our address: Streetname 22, 84503 City, Country</li>
+        </ul>
+        </div>
+       </section>
+       <footer class="footer">
+            <div class="footerdiv">
+                <p class="footerpara">Copyright ...</p>
+            </div>
+        </footer>    
+    <script src="index.js"></script>
 </body>
+
 </html>
