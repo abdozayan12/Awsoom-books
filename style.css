@@ -51,6 +51,11 @@ body {
   gap: 2rem;
 }
 
+#nav2 {
+  border-inline: 0.1rem solid black;
+  padding-inline: 1rem;
+}
+
 .navlink {
   text-decoration: none;
   color: black;
