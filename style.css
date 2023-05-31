@@ -4,7 +4,7 @@
 }
 
 body {
-  /* height: 100vh; */
+  height: 100vh;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -56,6 +56,10 @@ body {
   color: black;
   font-weight: bolder;
   font-size: 1.1rem;
+}
+
+.navlink:hover {
+  color: blue;
 }
 
 .booklist {
