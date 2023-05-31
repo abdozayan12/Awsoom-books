@@ -4,7 +4,7 @@
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -16,8 +16,71 @@ body {
   gap: 2rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 1rem;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline: 1rem;
+  padding-block: 0.4rem;
+}
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 1rem;
+  padding: 1.2rem 1rem 1.2rem 1.2rem;
+  border: 0.1rem solid black;
+  background-color: #fff;
+}
+
+#logo {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.navul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navlink {
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.booklist {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 0 8rem 0;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.addnew {
+  display: none;
+  flex-direction: column;
+  padding: 10rem 0 0 0;
+  align-items: center;
+  gap: 4rem;
+}
+
 .addBook {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,4 +135,55 @@ body {
   width: 30%;
   background-color: #fff;
   border-radius: 8px;
+}
+
+.contact {
+  display: none;
+  flex-direction: column;
+  padding: 8rem 0 0 0;
+  align-items: center;
+  gap: 4rem;
+}
+
+.contactdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.contacthead {
+  font-size: 1.5rem;
+}
+
+.contactpara {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.contactul {
+  padding-left: 1rem;
+}
+
+.contactli {
+  font-weight: bold;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 1rem;
+}
+
+.footerdiv {
+  background-color: #fff;
+  margin-inline: 1rem;
+  padding: 1.2rem 1rem 1.2rem 1.2rem;
+  border: 0.1rem solid black;
+}
+
+.footerpara {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
