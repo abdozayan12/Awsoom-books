@@ -16,11 +16,6 @@ body {
   gap: 2rem;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .header {
   position: fixed;
   width: 100%;
